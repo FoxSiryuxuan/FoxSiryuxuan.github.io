@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FoxSir Blog</title>
+    <link>https://foxsiryuxuan.github.io/</link>
+    <description>Recent content on FoxSir Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 27 Jan 2024 01:16:55 +0800</lastBuildDate>
+    <atom:link href="https://foxsiryuxuan.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>https://foxsiryuxuan.github.io/posts/test/</link>
+      <pubDate>Sat, 27 Jan 2024 01:16:55 +0800</pubDate>
+      <guid>https://foxsiryuxuan.github.io/posts/test/</guid>
+      <description>Test&#xD;Link to heading&#xD;Hallo world.</description>
+    </item>
+  </channel>
+</rss>
