@@ -2,17 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://foxsiryuxuan.github.io/</loc>
-    <lastmod>2024-01-27T01:16:55+08:00</lastmod>
+    <loc>https://foxsir.me/</loc>
+    <lastmod>2024-01-27T04:06:19+08:00</lastmod>
   </url><url>
-    <loc>https://foxsiryuxuan.github.io/posts/</loc>
-    <lastmod>2024-01-27T01:16:55+08:00</lastmod>
+    <loc>https://foxsir.me/posts/</loc>
+    <lastmod>2024-01-27T04:06:19+08:00</lastmod>
   </url><url>
-    <loc>https://foxsiryuxuan.github.io/posts/test/</loc>
-    <lastmod>2024-01-27T01:16:55+08:00</lastmod>
+    <loc>https://foxsir.me/posts/%E7%94%A8-github-&#43;-hugo-%E6%90%AD%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2024-01-27T04:06:19+08:00</lastmod>
   </url><url>
-    <loc>https://foxsiryuxuan.github.io/categories/</loc>
+    <loc>https://foxsir.me/about/</loc>
+    <lastmod>2024-01-27T01:28:33+08:00</lastmod>
   </url><url>
-    <loc>https://foxsiryuxuan.github.io/tags/</loc>
+    <loc>https://foxsir.me/about/first/</loc>
+    <lastmod>2024-01-27T01:28:33+08:00</lastmod>
+  </url><url>
+    <loc>https://foxsir.me/categories/</loc>
+  </url><url>
+    <loc>https://foxsir.me/tags/</loc>
   </url>
 </urlset>

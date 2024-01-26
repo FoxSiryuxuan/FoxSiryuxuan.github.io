@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  用 Github &#43; Hugo 搭一个博客 · FoxSir Blog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="FoxSir">
+<meta name="description" content="碎碎念Link to heading经过一下午和一晚上的奋斗, 你现在看见的这个站就被我建好了
+我实现了 Github, Cloud Flare, 的双重部署, 还购买了一个域名
+这是我第一次建站, 过程怎么说呢&hellip;&hellip;
+离谱二字即可形容, 为啥建个静态站这么困难
+还不是因为你菜
+总之, 记下来留给有需要的人
+感谢 ZIMK 的帮助, 以及墨雨提供的动机
+好了, 接下来说说怎么搞
+建立 Github 账号Link to heading有就直接用, 少废话
+前往 Github 建立一个账号
+新建一个项目Link to heading点击 New
+在 Repository name 里输入 &ldquo;account.github.io&rdquo;, 注意 &ldquo;account&rdquo; 为你自己的 github 用户名, 例如我的是 FoxSiryuxuan.github.io, 也就是说你们是可以通过 https://foxsiryuxuan.github.io/ 访问到我的博客的 (前提是你的网络情况好)
+最后点击 Create repository 就可以了
+安装 GitLink to headingWindows 直接去官网下载安装, 别的系统自己想办法">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="用 Github &#43; Hugo 搭一个博客"/>
+<meta name="twitter:description" content="碎碎念Link to heading经过一下午和一晚上的奋斗, 你现在看见的这个站就被我建好了
+我实现了 Github, Cloud Flare, 的双重部署, 还购买了一个域名
+这是我第一次建站, 过程怎么说呢&hellip;&hellip;
+离谱二字即可形容, 为啥建个静态站这么困难
+还不是因为你菜
+总之, 记下来留给有需要的人
+感谢 ZIMK 的帮助, 以及墨雨提供的动机
+好了, 接下来说说怎么搞
+建立 Github 账号Link to heading有就直接用, 少废话
+前往 Github 建立一个账号
+新建一个项目Link to heading点击 New
+在 Repository name 里输入 &ldquo;account.github.io&rdquo;, 注意 &ldquo;account&rdquo; 为你自己的 github 用户名, 例如我的是 FoxSiryuxuan.github.io, 也就是说你们是可以通过 https://foxsiryuxuan.github.io/ 访问到我的博客的 (前提是你的网络情况好)
+最后点击 Create repository 就可以了
+安装 GitLink to headingWindows 直接去官网下载安装, 别的系统自己想办法"/>
+
+<meta property="og:title" content="用 Github &#43; Hugo 搭一个博客" />
+<meta property="og:description" content="碎碎念Link to heading经过一下午和一晚上的奋斗, 你现在看见的这个站就被我建好了
+我实现了 Github, Cloud Flare, 的双重部署, 还购买了一个域名
+这是我第一次建站, 过程怎么说呢&hellip;&hellip;
+离谱二字即可形容, 为啥建个静态站这么困难
+还不是因为你菜
+总之, 记下来留给有需要的人
+感谢 ZIMK 的帮助, 以及墨雨提供的动机
+好了, 接下来说说怎么搞
+建立 Github 账号Link to heading有就直接用, 少废话
+前往 Github 建立一个账号
+新建一个项目Link to heading点击 New
+在 Repository name 里输入 &ldquo;account.github.io&rdquo;, 注意 &ldquo;account&rdquo; 为你自己的 github 用户名, 例如我的是 FoxSiryuxuan.github.io, 也就是说你们是可以通过 https://foxsiryuxuan.github.io/ 访问到我的博客的 (前提是你的网络情况好)
+最后点击 Create repository 就可以了
+安装 GitLink to headingWindows 直接去官网下载安装, 别的系统自己想办法" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://foxsir.me/posts/%E7%94%A8-github-&#43;-hugo-%E6%90%AD%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-27T04:06:19+08:00" />
+<meta property="article:modified_time" content="2024-01-27T04:06:19+08:00" />
+
+
+
+
+
+<link rel="canonical" href="https://foxsir.me/posts/%E7%94%A8-github-&#43;-hugo-%E6%90%AD%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.e1bdf152d93b060b06ba5d496486ed9c201a8b95d335e035beb5faebe3b61cad.css" integrity="sha256-4b3xUtk7BgsGul1JZIbtnCAai5XTNeA1vrX66&#43;O2HK0=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+  
+    
+    <link rel="stylesheet" href="/css/style.min.4a391877c185f27a0680b848d99fc39466aa0a4aaf142b06ec7b57715393a528.css" integrity="sha256-SjkYd8GF8noGgLhI2Z/DlGaqCkqvFCsG7HtXcVOTpSg=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      FoxSir Blog
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://foxsir.me/posts/%E7%94%A8-github-&#43;-hugo-%E6%90%AD%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/">
+              用 Github &#43; Hugo 搭一个博客
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-01-27T04:06:19&#43;08:00">
+                January 27, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h2 id="碎碎念">
+  碎碎念
+  <a class="heading-link" href="#%e7%a2%8e%e7%a2%8e%e5%bf%b5">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>经过一下午和一晚上的奋斗, 你现在看见的这个站就被我建好了</p>
+<p><img src="/img/1/01.jpg" alt="我不累"></p>
+<p>我实现了 Github, Cloud Flare, 的双重部署, 还购买了一个域名</p>
+<p>这是我第一次建站, 过程怎么说呢&hellip;&hellip;</p>
+<p><strong>离谱</strong>二字即可形容, 为啥建个静态站这么困难</p>
+<p><del>还不是因为你菜</del></p>
+<p>总之, 记下来留给有需要的人</p>
+<p>感谢 <a href="https://zimk.org/"  class="external-link" target="_blank" rel="noopener">ZIMK</a> 的帮助, 以及墨雨提供的动机</p>
+<p>好了, 接下来说说怎么搞</p>
+<h2 id="建立-github-账号">
+  建立 Github 账号
+  <a class="heading-link" href="#%e5%bb%ba%e7%ab%8b-github-%e8%b4%a6%e5%8f%b7">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<blockquote>
+<p>有就直接用, 少废话</p>
+</blockquote>
+<p>前往 <a href="https://www.github.com/" title="听说是全球最大的同性交友平台"  class="external-link" target="_blank" rel="noopener">Github</a> 建立一个账号</p>
+<h3 id="新建一个项目">
+  新建一个项目
+  <a class="heading-link" href="#%e6%96%b0%e5%bb%ba%e4%b8%80%e4%b8%aa%e9%a1%b9%e7%9b%ae">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><img src="/img/1/02.png" alt="02"></p>
+<p>点击 New</p>
+<p><img src="/img/1/03.png" alt="03"></p>
+<p>在 Repository name 里输入 &ldquo;account.github.io&rdquo;, 注意 &ldquo;account&rdquo; 为你自己的 github 用户名, 例如我的是 FoxSiryuxuan.github.io, 也就是说你们是可以通过 <a href="https://foxsiryuxuan.github.io/"  class="external-link" target="_blank" rel="noopener">https://foxsiryuxuan.github.io/</a> 访问到我的博客的 (前提是你的网络情况好)</p>
+<p>最后点击 Create repository 就可以了</p>
+<h2 id="安装-git">
+  安装 Git
+  <a class="heading-link" href="#%e5%ae%89%e8%a3%85-git">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Windows 直接去<a href="https://gitforwindows.org/"  class="external-link" target="_blank" rel="noopener">官网</a>下载安装, 别的系统自己想办法</p>
+<p>安装完后用以下命令检验一下</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt;git version
+</span></span><span style="display:flex;"><span>&gt;git version 2.43.0.windows.1
+</span></span></code></pre></div><h2 id="安装-hugo">
+  安装 hugo
+  <a class="heading-link" href="#%e5%ae%89%e8%a3%85-hugo">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="windows">
+  Windows
+  <a class="heading-link" href="#windows">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>直接利用 <a href="https://github.com/microsoft/winget-cli"  class="external-link" target="_blank" rel="noopener">winget</a> 安装, 没有的话就去 <a href="https://apps.microsoft.com/detail/9NBLGGH4NNS1"  class="external-link" target="_blank" rel="noopener">ms store</a> 下一个</p>
+<blockquote>
+<p>winget 是巨硬出品的 Windows 包管理器, 质量绝对好(确信)</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt;winget install Hugo.Hugo.Extended
+</span></span></code></pre></div><p>别的系统我没用过, 你们可以去<a href="https://gohugo.io/"  class="external-link" target="_blank" rel="noopener">官网</a>自己试试, 大体应该是没问题的</p>
+<h2 id="chocolatey--scoop">
+  Chocolatey &amp; Scoop
+  <a class="heading-link" href="#chocolatey--scoop">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<blockquote>
+<p>有看官网写, 我没用过, 你想用的话应该没啥问题, 可能会有细微差别</p>
+</blockquote>
+<h3 id="chocolatey">
+  Chocolatey
+  <a class="heading-link" href="#chocolatey">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt;choco install hugo-extended
+</span></span></code></pre></div><h3 id="scoop">
+  Scoop
+  <a class="heading-link" href="#scoop">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt;scoop install hugo-extended
+</span></span></code></pre></div><p>在安装完成后, 你可以使用这个命令检查一下</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt;hugo version
+</span></span><span style="display:flex;"><span>&gt;hugo v0.121.2-6d5b44305eaa9d0a157946492a6f319da38de154+extended windows/amd64 <span style="color:#79c0ff">BuildDate</span><span style="color:#ff7b72;font-weight:bold">=</span>2024-01-05T12:21:15Z <span style="color:#79c0ff">VendorInfo</span><span style="color:#ff7b72;font-weight:bold">=</span>gohugoio
+</span></span></code></pre></div><h2 id="本地创建一个-hugo-网站">
+  本地创建一个 Hugo 网站
+  <a class="heading-link" href="#%e6%9c%ac%e5%9c%b0%e5%88%9b%e5%bb%ba%e4%b8%80%e4%b8%aa-hugo-%e7%bd%91%e7%ab%99">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>运行</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt;hugo new site <span style="color:#a5d6ff">&#34;your-site&#34;</span>		<span style="color:#8b949e;font-style:italic"># &#34;your-site&#34; 你可以自定义(别问我中文行不行, 不怕 boom 就写)</span>
+</span></span><span style="display:flex;"><span>&gt;Congratulations! Your new Hugo site was created in C:<span style="color:#79c0ff">\U</span>sers<span style="color:#79c0ff">\u</span>sers<span style="color:#79c0ff">\s</span>ite.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Just a few more steps...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1. Change the current directory to C:<span style="color:#79c0ff">\U</span>sers<span style="color:#79c0ff">\u</span>sers<span style="color:#79c0ff">\s</span>ite.	<span style="color:#8b949e;font-style:italic"># users 是你的用户名</span>
+</span></span><span style="display:flex;"><span>2. Create or install a theme:
+</span></span><span style="display:flex;"><span>   - Create a new theme with the command <span style="color:#a5d6ff">&#34;hugo new theme &lt;THEMENAME&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>   - Install a theme from https://themes.gohugo.io/
+</span></span><span style="display:flex;"><span>3. Edit hugo.toml, setting the <span style="color:#a5d6ff">&#34;theme&#34;</span> property to the theme name.
+</span></span><span style="display:flex;"><span>4. Create new content with the command <span style="color:#a5d6ff">&#34;hugo new content &lt;SECTIONNAME&gt;\&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;</span>.
+</span></span><span style="display:flex;"><span>5. Start the embedded web server with the command <span style="color:#a5d6ff">&#34;hugo server --buildDrafts&#34;</span>.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>See documentation at https://gohugo.io/.
+</span></span></code></pre></div><p>现在去 hugo 提供的<a href="https://themes.gohugo.io/"  class="external-link" target="_blank" rel="noopener">主题官网</a>挑一个你看的顺眼的主题</p>
+<blockquote>
+<p>如果你完全不知道并且不想看/看不懂<a href="https://gohugo.io/"  class="external-link" target="_blank" rel="noopener">官方文档</a>的话, 你最好和我选择<a href="https://themes.gohugo.io/themes/hugo-coder/"  class="external-link" target="_blank" rel="noopener">一样的主题</a>, 这玩意换个主题需要的配置文件什么的完全就不一样了(我体感上, <del>菜是原罪</del>)</p>
+</blockquote>
+<p>以下操作如果你<del>一身反骨</del>选择了和我不一样的主题, 那么如果出问题了, 你自己解决 (我想帮都帮不上, 我自己就菜)</p>
+<p>放一个 <a href="https://hugo-coder.netlify.app/"  class="external-link" target="_blank" rel="noopener">Demo</a></p>
+<h3 id="git-主题">
+  git 主题
+  <a class="heading-link" href="#git-%e4%b8%bb%e9%a2%98">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<blockquote>
+<p>以下命令除非注明, 否则你就在 /your-site/, 文件夹下运行</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd your-site
+</span></span></code></pre></div><p>运行</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt;git init
+</span></span><span style="display:flex;"><span>&gt;git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder
+</span></span></code></pre></div><p>如果网络出现问题自己解决, 你可以找找 github 镜像站</p>
+<h3 id="写配置文件">
+  写配置文件
+  <a class="heading-link" href="#%e5%86%99%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<blockquote>
+<p>如果你前面选择的主题和我不一样, 这一步你最好别按照我的来</p>
+</blockquote>
+<p>在你的 &ldquo;your-site&rdquo; 目录下应该有个 config.toml, 将后缀改成 config.toml.bak <em>这一步是为了备份, 这种重要配置文件最好不要养成直接删除的习惯. 如果没有的话应该就是下面那个 hugo.toml 把 config.toml 替换了, 一样的操作, 改成 hugo.toml.bak</em></p>
+<p>创建一个 hugo.toml</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>baseurl = <span style="color:#a5d6ff">&#34;http://www.example.com&#34;</span>	<span style="color:#8b949e;font-style:italic"># 你的 Github Page 网址 &#34;https://account.github.io/&#34;</span>
+</span></span><span style="display:flex;"><span>title = <span style="color:#a5d6ff">&#34;johndoe&#34;</span>	<span style="color:#8b949e;font-style:italic"># 网页的标签名</span>
+</span></span><span style="display:flex;"><span>theme = <span style="color:#a5d6ff">&#34;hugo-coder&#34;</span>
+</span></span><span style="display:flex;"><span>languagecode = <span style="color:#a5d6ff">&#34;en&#34;</span>	<span style="color:#8b949e;font-style:italic"># 语言我没改过,但应该可以改</span>
+</span></span><span style="display:flex;"><span>defaultcontentlanguage = <span style="color:#a5d6ff">&#34;en&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>paginate = <span style="color:#a5d6ff">20</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># disqusShortname = &#34;yourdiscussshortname&#34; # 注释掉 (我不知道是干啥的)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[markup.highlight]
+</span></span><span style="display:flex;"><span>style = <span style="color:#a5d6ff">&#34;github-dark&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[params]
+</span></span><span style="display:flex;"><span>  author = <span style="color:#a5d6ff">&#34;John Doe&#34;</span>	<span style="color:#8b949e;font-style:italic"># 改成你的名字, 这是作者</span>
+</span></span><span style="display:flex;"><span>  info = <span style="color:#a5d6ff">&#34;Full Stack DevOps and Magician&#34;</span>	<span style="color:#8b949e;font-style:italic"># 你的小简介, 我的是 &#34;A normal guy&#34;</span>
+</span></span><span style="display:flex;"><span>  description = <span style="color:#a5d6ff">&#34;John Doe&#39;s personal website&#34;</span>	<span style="color:#8b949e;font-style:italic"># 你网站的简介</span>
+</span></span><span style="display:flex;"><span>  keywords = <span style="color:#a5d6ff">&#34;blog,developer,personal&#34;</span>
+</span></span><span style="display:flex;"><span>  avatarurl = <span style="color:#a5d6ff">&#34;images/avatar.jpg&#34;</span>	<span style="color:#8b949e;font-style:italic"># 你的头像, 路径在 /your-site/static/images/avatar.jpg, 没有就自己建, 记得头像命名为 &#34;avatar&#34;, 你的图片是 .jpg, .png, 或者别的你就自己改, 别傻傻的 .png你也改成 .jpg</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8b949e;font-style:italic">#gravatar = &#34;john.doe@example.com&#34;	#邮箱, 你有需求就写</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  faviconSVG = <span style="color:#a5d6ff">&#34;/img/favicon.svg&#34;</span>	<span style="color:#8b949e;font-style:italic"># 这几个应该都是关于你网站的 icon 的, 我的博客还没有 icon 呢, 如果真有人看到这里手上正好有觉得好看的 icon 可以找我哦, 我的 Telegram 群在主页了</span>
+</span></span><span style="display:flex;"><span>  favicon_32 = <span style="color:#a5d6ff">&#34;/img/favicon-32x32.png&#34;</span>
+</span></span><span style="display:flex;"><span>  favicon_16 = <span style="color:#a5d6ff">&#34;/img/favicon-16x16.png&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  since = <span style="color:#a5d6ff">2019</span>	<span style="color:#8b949e;font-style:italic"># 你网站的搭建年份, 好像是涉及版权之类的东西</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  enableTwemoji = <span style="color:#79c0ff">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  colorScheme = <span style="color:#a5d6ff">&#34;auto&#34;</span>
+</span></span><span style="display:flex;"><span>  hidecolorschemetoggle = <span style="color:#79c0ff">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8b949e;font-style:italic"># customCSS = [&#34;css/custom.css&#34;]	# 记住这个, 一会要改字体用</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8b949e;font-style:italic"># customSCSS = [&#34;scss/custom.scss&#34;]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8b949e;font-style:italic"># customJS = [&#34;js/custom.js&#34;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[taxonomies]	<span style="color:#8b949e;font-style:italic"># 这里不知道干嘛的, 我删了</span>
+</span></span><span style="display:flex;"><span>  category = <span style="color:#a5d6ff">&#34;categories&#34;</span>
+</span></span><span style="display:flex;"><span>  series = <span style="color:#a5d6ff">&#34;series&#34;</span>
+</span></span><span style="display:flex;"><span>  tag = <span style="color:#a5d6ff">&#34;tags&#34;</span>
+</span></span><span style="display:flex;"><span>  author = <span style="color:#a5d6ff">&#34;authors&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Social links</span>
+</span></span><span style="display:flex;"><span>[[params.social]]	<span style="color:#8b949e;font-style:italic"># 你主页的联系方式的 icon</span>
+</span></span><span style="display:flex;"><span>  name = <span style="color:#a5d6ff">&#34;Github&#34;</span>
+</span></span><span style="display:flex;"><span>  icon = <span style="color:#a5d6ff">&#34;fa fa-github fa-2x&#34;</span>
+</span></span><span style="display:flex;"><span>  weight = <span style="color:#a5d6ff">1</span>
+</span></span><span style="display:flex;"><span>  url = <span style="color:#a5d6ff">&#34;https://github.com/johndoe/&#34;</span>	<span style="color:#8b949e;font-style:italic"># 点击这个 icon 跳转的链接</span>
+</span></span><span style="display:flex;"><span>[[params.social]]
+</span></span><span style="display:flex;"><span>  name = <span style="color:#a5d6ff">&#34;Gitlab&#34;</span>
+</span></span><span style="display:flex;"><span>  icon = <span style="color:#a5d6ff">&#34;fa fa-gitlab fa-2x&#34;</span>
+</span></span><span style="display:flex;"><span>  weight = <span style="color:#a5d6ff">2</span>
+</span></span><span style="display:flex;"><span>  url = <span style="color:#a5d6ff">&#34;https://gitlab.com/johndoe/&#34;</span>
+</span></span><span style="display:flex;"><span>[[params.social]]
+</span></span><span style="display:flex;"><span>  name = <span style="color:#a5d6ff">&#34;Twitter&#34;</span>
+</span></span><span style="display:flex;"><span>  icon = <span style="color:#a5d6ff">&#34;fa fa-twitter fa-2x&#34;</span>
+</span></span><span style="display:flex;"><span>  weight = <span style="color:#a5d6ff">3</span>
+</span></span><span style="display:flex;"><span>  url = <span style="color:#a5d6ff">&#34;https://twitter.com/johndoe/&#34;</span>
+</span></span><span style="display:flex;"><span>[[params.social]]	<span style="color:#8b949e;font-style:italic"># 我自己加的</span>
+</span></span><span style="display:flex;"><span>  name = <span style="color:#a5d6ff">&#34;Telegram&#34;</span>
+</span></span><span style="display:flex;"><span>  icon = <span style="color:#a5d6ff">&#34;fa fa-telegram fa-2x&#34;</span>	<span style="color:#8b949e;font-style:italic"># 不知道啥原理, 但这么写确实有用</span>
+</span></span><span style="display:flex;"><span>  weight = <span style="color:#a5d6ff">2</span>
+</span></span><span style="display:flex;"><span>  url = <span style="color:#a5d6ff">&#34;https://t.me/+IGPDl0LkDlU2ZmQ9&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Menu links</span>
+</span></span><span style="display:flex;"><span>[[menu.main]]
+</span></span><span style="display:flex;"><span>  name = <span style="color:#a5d6ff">&#34;Blog&#34;</span>	<span style="color:#8b949e;font-style:italic"># 你菜单的链接的名称</span>
+</span></span><span style="display:flex;"><span>  weight = <span style="color:#a5d6ff">1</span>
+</span></span><span style="display:flex;"><span>  url  = <span style="color:#a5d6ff">&#34;posts/&#34;</span>	<span style="color:#8b949e;font-style:italic"># .md 文件存放的目录, /content/posts/, 下面那个同理</span>
+</span></span><span style="display:flex;"><span>[[menu.main]]
+</span></span><span style="display:flex;"><span>  name = <span style="color:#a5d6ff">&#34;About&#34;</span>
+</span></span><span style="display:flex;"><span>  weight = <span style="color:#a5d6ff">2</span>
+</span></span><span style="display:flex;"><span>  url = <span style="color:#a5d6ff">&#34;about/&#34;</span>
+</span></span></code></pre></div><p>找到 archetypes 文件夹, 编辑它</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>title: &#34;{{replace .Name &#34;-&#34; &#34; &#34; | title }}&#34;	<span style="color:#ffa657">#它可以让你下一步创建的文件名自动填写到</span> title 里
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>date: {{ .Date }}	# 自动获取时间
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>draft: false	# 将 true 修改为 false, 否则辛辛苦苦写的博客是看不见的, 没错, 它只是一个草稿
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>找到</p>
+<pre tabindex="0"><code>/your-site/themes/hugo-coder/archetypes/
+</code></pre><p>将里面俩文件删了</p>
+<h3 id="试运行">
+  试运行
+  <a class="heading-link" href="#%e8%af%95%e8%bf%90%e8%a1%8c">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>使用</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt;hugo server -w
+</span></span></code></pre></div><p>来启动本地服务, 你可以通过 <a href="localhost:1313" >localhost:1313</a> 来访问你的本地服务, 如果你成功看见一个正常的界面那么就恭喜你, 你成功了一半</p>
+<blockquote>
+<p>- w 是指如果你的文件被修改, 它就会自动刷新网页, 很方便</p>
+</blockquote>
+<p>现在, 你运行这个命令</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt;hugo new <span style="color:#a5d6ff">&#34;posts/first.md&#34;</span>
+</span></span></code></pre></div><p>就可以创建一个新博客文章了, 文章使用 Markdown 格式, 你可以使用 Typora, Visual Studio Code 等工具编辑它</p>
+<p>其次, 你应该看到这么一行字</p>
+<pre tabindex="0"><code class="language-markdowm" data-lang="markdowm">---
+
+title: &#34;first&#34;
+
+date: # 一串时间
+
+draft: false
+
+---
+</code></pre><p>现在, 你可以编写一点东西, 然后去浏览器里, 在你的 blog 里应该就可以看见了</p>
+<h2 id="更改字体">
+  更改字体
+  <a class="heading-link" href="#%e6%9b%b4%e6%94%b9%e5%ad%97%e4%bd%93">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>你成功了大半了, 但是你会发现, 字体咋个么奇怪呢?</p>
+<p>所以, 我们需要让字体更易读一点</p>
+<p><del>你要是喜欢这种字体当我没说</del></p>
+<p>先停止本地服务 &ldquo;ctrl + c&rdquo;</p>
+<p>然后去这个<a href="https://wordshub.github.io/free-font/font.html?WenQuanYiWeiMiHei_Regular#try"  class="external-link" target="_blank" rel="noopener">网站</a>找个字体下载下来, 我推荐文泉驿微米黑</p>
+<p>将你下载的 .ttf  文件保存到你的 /static/fonts/, 目录下, 我根据个人习惯将下载下来的字体文件名改成了 &ldquo;wenquanyimicrohei.ttf&rdquo;</p>
+<p>在 &ldquo;/assets/css/&rdquo; 目录下创建一个 &ldquo;style.css&rdquo; 文件, 里面写上</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>@<span style="color:#ff7b72">font-face</span> {	<span style="color:#8b949e;font-style:italic">/*引用字体*/</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">font-family</span><span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">&#34;wenquanyi&#34;</span><span style="color:#ff7b72;font-weight:bold">;</span>	<span style="color:#8b949e;font-style:italic">/*给自己的字体取个好记得名字*/</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">src</span><span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#7ee787">url</span><span style="color:#ff7b72;font-weight:bold">(</span><span style="color:#a5d6ff">&#34;./static/fonts/wenquanyimicrohei.ttf&#34;</span><span style="color:#ff7b72;font-weight:bold">)</span> <span style="color:#7ee787">format</span><span style="color:#ff7b72;font-weight:bold">(</span><span style="color:#a5d6ff">&#34;truetype&#34;</span><span style="color:#ff7b72;font-weight:bold">);</span>	<span style="color:#8b949e;font-style:italic">/*你自己的字体文件*/</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">body</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">font-family</span>: <span style="color:#a5d6ff">&#34;wenquanyi&#34;</span>;	<span style="color:#8b949e;font-style:italic">/*使用字体*/</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>在找到根目录下的 &ldquo;hugo.toml&rdquo;</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>  <span style="color:#f85149">#</span> <span style="color:#7ee787">customCSS</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">[</span><span style="color:#a5d6ff">&#34;css/custom.css&#34;</span><span style="color:#ff7b72;font-weight:bold">]</span>	<span style="color:#f85149">#</span> <span style="color:#7ee787">嗨嗨嗨</span><span style="color:#ff7b72;font-weight:bold">,</span> <span style="color:#7ee787">来了哦</span><span style="color:#ff7b72;font-weight:bold">,</span> <span style="color:#7ee787">将</span> <span style="color:#a5d6ff">&#34;custom.css&#34;</span> <span style="color:#7ee787">改为</span> <span style="color:#a5d6ff">&#34;style.css&#34;</span><span style="color:#ff7b72;font-weight:bold">,</span> <span style="color:#7ee787">然后取消注释</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f85149">#</span> <span style="color:#7ee787">customSCSS</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">[</span><span style="color:#a5d6ff">&#34;scss/custom.scss&#34;</span><span style="color:#ff7b72;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f85149">#</span> <span style="color:#7ee787">customJS</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">[</span><span style="color:#a5d6ff">&#34;js/custom.js&#34;</span><span style="color:#ff7b72;font-weight:bold">]</span>
+</span></span></code></pre></div><h2 id="本地最后检查">
+  本地最后检查
+  <a class="heading-link" href="#%e6%9c%ac%e5%9c%b0%e6%9c%80%e5%90%8e%e6%a3%80%e6%9f%a5">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>运行</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt;hugo server -w
+</span></span></code></pre></div><p>刷新 <a href="localhost:1313" >localhost:1313</a>, 看看是不是一切正常, 如果一切正常我们离成功就差一步之遥了</p>
+<h2 id="推到-github-上">
+  推到 github 上
+  <a class="heading-link" href="#%e6%8e%a8%e5%88%b0-github-%e4%b8%8a">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>依次输入命令</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt;hugo
+</span></span><span style="display:flex;"><span>&gt;cd public
+</span></span><span style="display:flex;"><span>&gt;git init
+</span></span><span style="display:flex;"><span>&gt;git remote add origin https://github.com/account/account.github.io.git	<span style="color:#8b949e;font-style:italic"># account 是你的 github 账户名, 在最后加上&#34;.git&#34;</span>
+</span></span><span style="display:flex;"><span>&gt;git add .
+</span></span><span style="display:flex;"><span>&gt;git commit -m <span style="color:#a5d6ff">&#34;随便写点啥, 比如日期&#34;</span>
+</span></span><span style="display:flex;"><span>&gt;git push -u origin master
+</span></span></code></pre></div><p>如果一切顺利, 你就可以在你的 <a href="https://account.github.io/"  class="external-link" target="_blank" rel="noopener">https://account.github.io/</a> 上看到你的博客了(等一会, 部署有个时间的), 例如我的 <a href="https://foxsiryuxuan.github.io/"  class="external-link" target="_blank" rel="noopener">https://foxsiryuxuan.github.io/</a></p>
+<h2 id="在-cloud-flare-中部署">
+  在 Cloud Flare 中部署
+  <a class="heading-link" href="#%e5%9c%a8-cloud-flare-%e4%b8%ad%e9%83%a8%e7%bd%b2">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>你需要一个 cloud flare 账号, 没有的去注册, 然后你就可以到<a href="https://dash.cloudflare.com/"  class="external-link" target="_blank" rel="noopener">这里</a></p>
+<p>接下来, 你需要在侧边栏找到 &ldquo;Workers and Pages&rdquo;, 点进去, 选择 Pages, 连接到 github, 选择你的那个项目, 把名字一改, 例如我改成了 &ldquo;foxsir&rdquo;</p>
+<p>点击部署</p>
+<p>部署完成后你就获得了你的第二个静态博客, 例如我的是 <a href="https://foxsir.pages.dev"  class="external-link" target="_blank" rel="noopener">https://foxsir.pages.dev/</a></p>
+<h2 id="购买域名">
+  购买域名
+  <a class="heading-link" href="#%e8%b4%ad%e4%b9%b0%e5%9f%9f%e5%90%8d">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>自行购买一个域名, 然后在 Cloud Flare &ldquo;Workers and Pages&rdquo; 选择你刚才的项目, 添加 custom domain, 用你刚才买的域名</p>
+<h2 id="大功告成">
+  大功告成
+  <a class="heading-link" href="#%e5%a4%a7%e5%8a%9f%e5%91%8a%e6%88%90">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>当你从你的域名看见你的博客页面的时候, 你就可以好好睡一觉了</p>
+<p><img src="/img/1/01.jpg" alt="我不累"></p>
+<p>记得把 &ldquo;hugo.toml&rdquo; 里的</p>
+<pre tabindex="0"><code>baseurl = &#34;http://account.github.io/&#34;
+</code></pre><p>改成你的域名</p>
+<h2 id="最后的一些补充">
+  最后的一些补充
+  <a class="heading-link" href="#%e6%9c%80%e5%90%8e%e7%9a%84%e4%b8%80%e4%ba%9b%e8%a1%a5%e5%85%85">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="删除博客">
+  删除博客
+  <a class="heading-link" href="#%e5%88%a0%e9%99%a4%e5%8d%9a%e5%ae%a2">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>如果你想删除博客, 那么你不应该只删除 /content/posts/ 里的文件, /public/posts/里你想删除.md文件对应的文件夹也一起删掉</p>
+<h3 id="更新博客">
+  更新博客
+  <a class="heading-link" href="#%e6%9b%b4%e6%96%b0%e5%8d%9a%e5%ae%a2">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt;hugo
+</span></span><span style="display:flex;"><span>&gt;cd public
+</span></span><span style="display:flex;"><span>&gt;git add .
+</span></span><span style="display:flex;"><span>&gt;git commit -m <span style="color:#a5d6ff">&#34;你知道写啥的&#34;</span>
+</span></span><span style="display:flex;"><span>&gt;git push -u origin master
+</span></span></code></pre></div><h3 id="引用图片">
+  引用图片
+  <a class="heading-link" href="#%e5%bc%95%e7%94%a8%e5%9b%be%e7%89%87">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>有两种方式, 一种是图床, 一种是本地</p>
+<p>图床我 (兜) 没 (里) 用 (没) 过 (钱), 所以用的本地</p>
+<p>将图片保存至 /static/images/</p>
+<p>例如 /static/images/foxsir.jpg <em>我自己这张图的实际路径是 /static/img/FoxSir.jpg</em></p>
+<p>那么我们可以这么引用</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#7ee787">FoxSir</span>](/img/FoxSir.jpg)
+</span></span></code></pre></div><p><img src="/img/FoxSir.jpg" alt="FoxSir"></p>
+<p><em>1</em></p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2024
+     FoxSir 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

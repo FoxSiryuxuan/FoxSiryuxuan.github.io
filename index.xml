@@ -2,18 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>FoxSir Blog</title>
-    <link>https://foxsiryuxuan.github.io/</link>
+    <link>https://foxsir.me/</link>
     <description>Recent content on FoxSir Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Jan 2024 01:16:55 +0800</lastBuildDate>
-    <atom:link href="https://foxsiryuxuan.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Jan 2024 04:06:19 +0800</lastBuildDate>
+    <atom:link href="https://foxsir.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
-      <link>https://foxsiryuxuan.github.io/posts/test/</link>
-      <pubDate>Sat, 27 Jan 2024 01:16:55 +0800</pubDate>
-      <guid>https://foxsiryuxuan.github.io/posts/test/</guid>
-      <description>Test&#xD;Link to heading&#xD;Hallo world.</description>
+      <title>用 Github &#43; Hugo 搭一个博客</title>
+      <link>https://foxsir.me/posts/%E7%94%A8-github-&#43;-hugo-%E6%90%AD%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sat, 27 Jan 2024 04:06:19 +0800</pubDate>
+      <guid>https://foxsir.me/posts/%E7%94%A8-github-&#43;-hugo-%E6%90%AD%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>碎碎念&#xD;Link to heading&#xD;经过一下午和一晚上的奋斗, 你现在看见的这个站就被我建好了&#xA;我实现了 Github, Cloud Flare, 的双重部署, 还购买了一个域名&#xA;这是我第一次建站, 过程怎么说呢&amp;hellip;&amp;hellip;&#xA;离谱二字即可形容, 为啥建个静态站这么困难&#xA;还不是因为你菜&#xA;总之, 记下来留给有需要的人&#xA;感谢 ZIMK 的帮助, 以及墨雨提供的动机&#xA;好了, 接下来说说怎么搞&#xA;建立 Github 账号&#xD;Link to heading&#xD;有就直接用, 少废话&#xA;前往 Github 建立一个账号&#xA;新建一个项目&#xD;Link to heading&#xD;点击 New&#xA;在 Repository name 里输入 &amp;ldquo;account.github.io&amp;rdquo;, 注意 &amp;ldquo;account&amp;rdquo; 为你自己的 github 用户名, 例如我的是 FoxSiryuxuan.github.io, 也就是说你们是可以通过 https://foxsiryuxuan.github.io/ 访问到我的博客的 (前提是你的网络情况好)&#xA;最后点击 Create repository 就可以了&#xA;安装 Git&#xD;Link to heading&#xD;Windows 直接去官网下载安装, 别的系统自己想办法</description>
+    </item>
+    <item>
+      <title>First</title>
+      <link>https://foxsir.me/about/first/</link>
+      <pubDate>Sat, 27 Jan 2024 01:28:33 +0800</pubDate>
+      <guid>https://foxsir.me/about/first/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

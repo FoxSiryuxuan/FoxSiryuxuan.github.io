@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on FoxSir Blog</title>
+    <link>https://foxsir.me/about/</link>
+    <description>Recent content in Abouts on FoxSir Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 27 Jan 2024 01:28:33 +0800</lastBuildDate>
+    <atom:link href="https://foxsir.me/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First</title>
+      <link>https://foxsir.me/about/first/</link>
+      <pubDate>Sat, 27 Jan 2024 01:28:33 +0800</pubDate>
+      <guid>https://foxsir.me/about/first/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
