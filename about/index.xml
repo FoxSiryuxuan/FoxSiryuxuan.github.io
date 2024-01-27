@@ -6,14 +6,14 @@
     <description>Recent content in Abouts on FoxSir Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Jan 2024 01:28:33 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jan 2024 17:19:29 +0800</lastBuildDate>
     <atom:link href="https://foxsir.me/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>First</title>
-      <link>https://foxsir.me/about/first/</link>
-      <pubDate>Sat, 27 Jan 2024 01:28:33 +0800</pubDate>
-      <guid>https://foxsir.me/about/first/</guid>
-      <description></description>
+      <title>About</title>
+      <link>https://foxsir.me/about/about/</link>
+      <pubDate>Sat, 27 Jan 2024 17:19:29 +0800</pubDate>
+      <guid>https://foxsir.me/about/about/</guid>
+      <description>这里一般都是写啥的啊?</description>
     </item>
   </channel>
 </rss>
