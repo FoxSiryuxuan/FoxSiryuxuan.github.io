@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://foxsir.me/</loc>
+    <lastmod>2024-01-27T18:07:50+08:00</lastmod>
+  </url><url>
+    <loc>https://foxsir.me/friends/</loc>
+    <lastmod>2024-01-27T18:07:50+08:00</lastmod>
+  </url><url>
+    <loc>https://foxsir.me/friends/friends/</loc>
+    <lastmod>2024-01-27T18:07:50+08:00</lastmod>
+  </url><url>
     <loc>https://foxsir.me/about/about/</loc>
     <lastmod>2024-01-27T17:19:29+08:00</lastmod>
   </url><url>
     <loc>https://foxsir.me/about/</loc>
-    <lastmod>2024-01-27T17:19:29+08:00</lastmod>
-  </url><url>
-    <loc>https://foxsir.me/</loc>
     <lastmod>2024-01-27T17:19:29+08:00</lastmod>
   </url><url>
     <loc>https://foxsir.me/posts/</loc>

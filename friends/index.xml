@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Friends on FoxSir Blog</title>
+    <link>https://foxsir.me/friends/</link>
+    <description>Recent content in Friends on FoxSir Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 27 Jan 2024 18:07:50 +0800</lastBuildDate>
+    <atom:link href="https://foxsir.me/friends/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Friends</title>
+      <link>https://foxsir.me/friends/friends/</link>
+      <pubDate>Sat, 27 Jan 2024 18:07:50 +0800</pubDate>
+      <guid>https://foxsir.me/friends/friends/</guid>
+      <description>Friends&#xD;Link to heading&#xD;这里是朋友们的集合地&#xA;ZIMK&#xA;ZIMK&#xD;Link to heading&#xD;About&#xD;Link to heading&#xD;昵称:知命 性别男,爱好女 是一个打工人,Blog只是一种娱乐 Blog</description>
+    </item>
+  </channel>
+</rss>
