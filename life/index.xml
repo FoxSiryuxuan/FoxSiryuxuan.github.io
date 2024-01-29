@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lives on FoxSir Blog</title>
+    <link>https://foxsir.me/life/</link>
+    <description>Recent content in Lives on FoxSir Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 29 Jan 2024 02:31:01 +0800</lastBuildDate>
+    <atom:link href="https://foxsir.me/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Life About</title>
+      <link>https://foxsir.me/life/life-about/</link>
+      <pubDate>Mon, 29 Jan 2024 02:31:01 +0800</pubDate>
+      <guid>https://foxsir.me/life/life-about/</guid>
+      <description>这里是放本人碎碎念的地方</description>
+    </item>
+  </channel>
+</rss>
