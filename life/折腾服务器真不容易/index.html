@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  折腾服务器真不容易 · FoxSir Blog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="FoxSir">
+<meta name="description" content="这事情怎么说呢, 大致就是
+因为我的服务器 (这服务器也是白嫖他的) 出了一些问题, 搞得我实在厌烦, 所以我使用了 ZIMK 博客里的 DD Debian 脚本试图重装系统. 但由于太急没能发现他的脚本自带他自己的 ssh 密钥, 所以&hellip;&hellip;
+这还好, 到这一步也不过是让他帮忙连上服务器帮我修改一下
+但这个时候, 他在帮我修改密码的时候提出让我弃用密码登录, 改用密钥登陆. 我没多想便同意了, 一切本应该很顺利的, 我把公钥给他, 他帮我配置了一遍, 结果您猜怎么着? 当我用 Windows 自带的 ssh 去连接服务器的时候, 它就卡住了
+反正, 最后又让 ZIMK 给我改回了密码连接, 我第一次确实是连上了, 但当我断开后再连一次的时候, 它提示我权限不足&hellip;&hellip;
+最后我们是通过 vnc 的方式抢救回来的 (实际上只有他, 我只是在旁边添堵)
+好在是救回来了, 大体思路用的是这篇文章
+这个故事告诉我们, 当你是 root 用户的时候必须要谨慎行事 怂一点, 以及, 当你第一次部署东西到云服务器上的时候一定要先在本地练练手 (毕竟本地就算把系统折腾坏了也能直接重装系统)
+2">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="折腾服务器真不容易"/>
+<meta name="twitter:description" content="这事情怎么说呢, 大致就是
+因为我的服务器 (这服务器也是白嫖他的) 出了一些问题, 搞得我实在厌烦, 所以我使用了 ZIMK 博客里的 DD Debian 脚本试图重装系统. 但由于太急没能发现他的脚本自带他自己的 ssh 密钥, 所以&hellip;&hellip;
+这还好, 到这一步也不过是让他帮忙连上服务器帮我修改一下
+但这个时候, 他在帮我修改密码的时候提出让我弃用密码登录, 改用密钥登陆. 我没多想便同意了, 一切本应该很顺利的, 我把公钥给他, 他帮我配置了一遍, 结果您猜怎么着? 当我用 Windows 自带的 ssh 去连接服务器的时候, 它就卡住了
+反正, 最后又让 ZIMK 给我改回了密码连接, 我第一次确实是连上了, 但当我断开后再连一次的时候, 它提示我权限不足&hellip;&hellip;
+最后我们是通过 vnc 的方式抢救回来的 (实际上只有他, 我只是在旁边添堵)
+好在是救回来了, 大体思路用的是这篇文章
+这个故事告诉我们, 当你是 root 用户的时候必须要谨慎行事 怂一点, 以及, 当你第一次部署东西到云服务器上的时候一定要先在本地练练手 (毕竟本地就算把系统折腾坏了也能直接重装系统)
+2"/>
+
+<meta property="og:title" content="折腾服务器真不容易" />
+<meta property="og:description" content="这事情怎么说呢, 大致就是
+因为我的服务器 (这服务器也是白嫖他的) 出了一些问题, 搞得我实在厌烦, 所以我使用了 ZIMK 博客里的 DD Debian 脚本试图重装系统. 但由于太急没能发现他的脚本自带他自己的 ssh 密钥, 所以&hellip;&hellip;
+这还好, 到这一步也不过是让他帮忙连上服务器帮我修改一下
+但这个时候, 他在帮我修改密码的时候提出让我弃用密码登录, 改用密钥登陆. 我没多想便同意了, 一切本应该很顺利的, 我把公钥给他, 他帮我配置了一遍, 结果您猜怎么着? 当我用 Windows 自带的 ssh 去连接服务器的时候, 它就卡住了
+反正, 最后又让 ZIMK 给我改回了密码连接, 我第一次确实是连上了, 但当我断开后再连一次的时候, 它提示我权限不足&hellip;&hellip;
+最后我们是通过 vnc 的方式抢救回来的 (实际上只有他, 我只是在旁边添堵)
+好在是救回来了, 大体思路用的是这篇文章
+这个故事告诉我们, 当你是 root 用户的时候必须要谨慎行事 怂一点, 以及, 当你第一次部署东西到云服务器上的时候一定要先在本地练练手 (毕竟本地就算把系统折腾坏了也能直接重装系统)
+2" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://foxsir.me/life/%E6%8A%98%E8%85%BE%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9C%9F%E4%B8%8D%E5%AE%B9%E6%98%93/" /><meta property="article:section" content="life" />
+<meta property="article:published_time" content="2024-01-29T12:22:46+08:00" />
+<meta property="article:modified_time" content="2024-01-29T12:22:46+08:00" />
+
+
+
+
+
+<link rel="canonical" href="https://foxsir.me/life/%E6%8A%98%E8%85%BE%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9C%9F%E4%B8%8D%E5%AE%B9%E6%98%93/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.e1bdf152d93b060b06ba5d496486ed9c201a8b95d335e035beb5faebe3b61cad.css" integrity="sha256-4b3xUtk7BgsGul1JZIbtnCAai5XTNeA1vrX66&#43;O2HK0=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+  
+    
+    <link rel="stylesheet" href="/css/style.min.4a391877c185f27a0680b848d99fc39466aa0a4aaf142b06ec7b57715393a528.css" integrity="sha256-SjkYd8GF8noGgLhI2Z/DlGaqCkqvFCsG7HtXcVOTpSg=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/foxsir.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/FoxSir-32x32.jpg" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/FoxSir-16x16.jpg" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      FoxSir Blog
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/life/">Life</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/friends/">Friends</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://foxsir.me/life/%E6%8A%98%E8%85%BE%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9C%9F%E4%B8%8D%E5%AE%B9%E6%98%93/">
+          折腾服务器真不容易
+        </a>
+      </h1>
+    </header>
+
+    <p>这事情怎么说呢, 大致就是</p>
+<p>因为我的服务器 (<del>这服务器也是白嫖他的</del>) 出了一些问题, 搞得我实在厌烦, 所以我使用了 <a href="https://zimk.org/"  class="external-link" target="_blank" rel="noopener">ZIMK</a> 博客里的 DD Debian 脚本试图重装系统. 但由于太急没能发现他的脚本自带他自己的 ssh 密钥, 所以&hellip;&hellip;</p>
+<p>这还好, 到这一步也不过是让他帮忙连上服务器帮我修改一下</p>
+<p>但这个时候, 他在帮我修改密码的时候提出让我弃用密码登录, 改用密钥登陆. 我没多想便同意了, 一切本应该很顺利的, 我把公钥给他, 他帮我配置了一遍, 结果您猜怎么着? 当我用 Windows 自带的 ssh 去连接服务器的时候, 它就卡住了</p>
+<p><img src="/img/2/01.jpg" alt="我尼玛看傻了都"></p>
+<p>反正, 最后又让 ZIMK 给我改回了密码连接, 我第一次确实是连上了, 但当我断开后再连一次的时候, 它提示我权限不足&hellip;&hellip;</p>
+<p><img src="/img/2/01.jpg" alt="我尼玛看傻了都"></p>
+<p>最后我们是通过 vnc 的方式抢救回来的 (<del>实际上只有他, 我只是在旁边添堵</del>)</p>
+<p>好在是救回来了, 大体思路用的是这篇<a href="https://51.ruyo.net/16216.html"  class="external-link" target="_blank" rel="noopener">文章</a></p>
+<p>这个故事告诉我们, 当你是 root 用户的时候必须要谨慎行事 <del>怂一点</del>, 以及, 当你第一次部署东西到云服务器上的时候一定要先在本地练练手 (毕竟本地就算把系统折腾坏了也能直接重装系统)</p>
+<p><em>2</em></p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2024
+     FoxSir 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

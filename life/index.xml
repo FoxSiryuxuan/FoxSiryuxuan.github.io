@@ -6,8 +6,15 @@
     <description>Recent content in Lives on FoxSir Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 29 Jan 2024 02:31:01 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jan 2024 12:22:46 +0800</lastBuildDate>
     <atom:link href="https://foxsir.me/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>折腾服务器真不容易</title>
+      <link>https://foxsir.me/life/%E6%8A%98%E8%85%BE%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9C%9F%E4%B8%8D%E5%AE%B9%E6%98%93/</link>
+      <pubDate>Mon, 29 Jan 2024 12:22:46 +0800</pubDate>
+      <guid>https://foxsir.me/life/%E6%8A%98%E8%85%BE%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9C%9F%E4%B8%8D%E5%AE%B9%E6%98%93/</guid>
+      <description>这事情怎么说呢, 大致就是&#xA;因为我的服务器 (这服务器也是白嫖他的) 出了一些问题, 搞得我实在厌烦, 所以我使用了 ZIMK 博客里的 DD Debian 脚本试图重装系统. 但由于太急没能发现他的脚本自带他自己的 ssh 密钥, 所以&amp;hellip;&amp;hellip;&#xA;这还好, 到这一步也不过是让他帮忙连上服务器帮我修改一下&#xA;但这个时候, 他在帮我修改密码的时候提出让我弃用密码登录, 改用密钥登陆. 我没多想便同意了, 一切本应该很顺利的, 我把公钥给他, 他帮我配置了一遍, 结果您猜怎么着? 当我用 Windows 自带的 ssh 去连接服务器的时候, 它就卡住了&#xA;反正, 最后又让 ZIMK 给我改回了密码连接, 我第一次确实是连上了, 但当我断开后再连一次的时候, 它提示我权限不足&amp;hellip;&amp;hellip;&#xA;最后我们是通过 vnc 的方式抢救回来的 (实际上只有他, 我只是在旁边添堵)&#xA;好在是救回来了, 大体思路用的是这篇文章&#xA;这个故事告诉我们, 当你是 root 用户的时候必须要谨慎行事 怂一点, 以及, 当你第一次部署东西到云服务器上的时候一定要先在本地练练手 (毕竟本地就算把系统折腾坏了也能直接重装系统)&#xA;2</description>
+    </item>
     <item>
       <title>Life About</title>
       <link>https://foxsir.me/life/life-about/</link>
